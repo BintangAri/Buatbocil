@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Buatbocil/static/css/main.8e3f6539.css",
+    "main.css": "/Buatbocil/static/css/main.300ca749.css",
     "main.js": "/Buatbocil/static/js/main.d0b31e39.js",
     "static/js/453.d15be7d8.chunk.js": "/Buatbocil/static/js/453.d15be7d8.chunk.js",
     "index.html": "/Buatbocil/index.html",
-    "main.8e3f6539.css.map": "/Buatbocil/static/css/main.8e3f6539.css.map",
+    "main.300ca749.css.map": "/Buatbocil/static/css/main.300ca749.css.map",
     "main.d0b31e39.js.map": "/Buatbocil/static/js/main.d0b31e39.js.map",
     "453.d15be7d8.chunk.js.map": "/Buatbocil/static/js/453.d15be7d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e3f6539.css",
+    "static/css/main.300ca749.css",
     "static/js/main.d0b31e39.js"
   ]
 }
