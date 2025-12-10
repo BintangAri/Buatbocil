@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Buatbocil/static/css/main.5cc9ac2d.css",
+    "main.js": "/Buatbocil/static/js/main.075dbb1a.js",
+    "static/js/453.d15be7d8.chunk.js": "/Buatbocil/static/js/453.d15be7d8.chunk.js",
+    "index.html": "/Buatbocil/index.html",
+    "main.5cc9ac2d.css.map": "/Buatbocil/static/css/main.5cc9ac2d.css.map",
+    "main.075dbb1a.js.map": "/Buatbocil/static/js/main.075dbb1a.js.map",
+    "453.d15be7d8.chunk.js.map": "/Buatbocil/static/js/453.d15be7d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cc9ac2d.css",
+    "static/js/main.075dbb1a.js"
+  ]
+}
