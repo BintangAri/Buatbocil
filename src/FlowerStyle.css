@@ -12,23 +12,21 @@
   background: radial-gradient(circle at center bottom, #ffe4e6, #fff0f5, #fff5f7);
 }
 
-/* ========================================= */
-/* CONTAINER UTAMA (POSISI DINAIKKAN LAGI) */
-/* ========================================= */
+/* CONTAINER UTAMA */
 .bouquet-container {
   position: absolute;
-  /* REVISI DESKTOP: Dinaikkan jadi 180px agar pita terlihat jelas */
-  bottom: 180px; 
+  /* REVISI: Turunkan ke 50px agar menapak tapi pita aman */
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 500px;  
   height: 650px; 
   pointer-events: none;
-  z-index: 10; /* Di bawah GIF */
+  z-index: 10; 
 }
 
 
-/* --- BAGIAN BUCKET (WRAPPING PAPER) --- */
+/* --- BAGIAN BUCKET --- */
 .bucket-paper-back {
   position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
   width: 540px;
@@ -164,20 +162,18 @@
 @keyframes leaf-unfurl { to { opacity: 1; } }
 
 
-/* ========================================= */
-/* RESPONSIVE MOBILE (POSISI DINAIKKAN LAGI) */
-/* ========================================= */
+/* --- RESPONSIVE MOBILE (POSISI PAS DI DASAR) --- */
 @media (max-width: 600px) {
   
   .bouquet-container {
     width: 100%; 
     height: 100%;
     
-    /* Scale tetap */
+    /* Scale sedikit dikecilkan biar proporsional */
     transform: translateX(-50%) scale(0.65); 
     
-    /* REVISI MOBILE: Dinaikkan jadi 120px agar pita aman terlihat */
-    bottom: 120px; 
+    /* REVISI: BOTTOM -20px AGAR MENAPAK TAPI PITA KELIHATAN */
+    bottom: -20px; 
     
     transform-origin: bottom center;
   }
