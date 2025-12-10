@@ -1,0 +1,99 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; overflow: hidden; background-color: #ffe4e6; }
+
+/* Wrapper Umum */
+.container {
+  height: 100vh; height: 100dvh; width: 100vw;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;
+}
+
+/* Background */
+.question-bg { background-color: #ffe4e6; }
+.lie-bg { background-color: #fbcfe8; }
+
+/* Typography */
+.question {
+  color: #db2777; font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700; line-height: 1.2;
+}
+.subtitle { color: #9d174d; font-size: 1.2rem; margin-bottom: 2rem; }
+
+/* Tombol */
+.button-group { display: flex; gap: 20px; justify-content: center; width: 100%; }
+.btn {
+  padding: 15px 40px; font-size: 1.2rem; border: none; border-radius: 50px;
+  cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-weight: bold; white-space: nowrap;
+}
+.btn:active { transform: scale(0.95); }
+.yes-btn { background-color: #db2777; color: white; box-shadow: 0 4px 15px rgba(219,39,119,0.4); }
+.yes-btn:hover { background-color: #be185d; }
+.no-btn { background-color: white; color: #db2777; border: 2px solid #db2777; }
+.retry-btn { background-color: #be185d; color: white; animation: pulse 1.5s infinite; }
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(190, 24, 93, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(190, 24, 93, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(190, 24, 93, 0); }
+}
+
+/* GIF Pages (Halaman Lie) */
+.gif-container { margin-bottom: 20px; max-width: 100%; }
+.lie-page-gif { width: 180px; max-width: 80vw; height: auto; animation: popIn 0.8s ease; }
+@keyframes popIn { 0% { transform: scale(0); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+/* Final Page Styles */
+.final-page { position: relative; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden; }
+.final-title {
+  position: absolute; top: 10%; left: 50%; transform: translateX(-50%); width: 90%; text-align: center;
+  color: #db2777; font-size: 2rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  z-index: 50; opacity: 0; animation: fadeInDown 1s ease-out forwards 0.5s;
+}
+@keyframes fadeInDown { from { opacity: 0; transform: translate(-50%, -30px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+/* --- PERBAIKAN: CSS UNTUK GIF DI HALAMAN BUNGA --- */
+
+/* Style Dasar untuk kedua GIF (Kiri & Kanan) */
+.final-gif {
+  position: absolute;
+  bottom: 0;
+  width: 150px; /* Ukuran default desktop */
+  height: auto;
+  z-index: 100; /* Pastikan di atas layer bunga */
+  opacity: 0;   /* Mulai invisible */
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* GIF KIRI */
+.gif-left {
+  left: 0;
+  animation-name: slideInFromLeft;
+  animation-delay: 1s;
+}
+
+/* GIF KANAN */
+.gif-right {
+  right: 0;
+  animation-name: slideInFromRight;
+  animation-delay: 1.2s;
+}
+
+@keyframes slideInFromLeft { 0% { transform: translateX(-100%); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
+@keyframes slideInFromRight { 0% { transform: translateX(100%); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
+
+
+/* --- KHUSUS MOBILE --- */
+@media (max-width: 600px) {
+  .question { font-size: 2rem; }
+  .button-group { flex-direction: row; gap: 15px; }
+  .btn { padding: 12px 25px; font-size: 1rem; } 
+  .final-title { font-size: 1.6rem; top: 12%; }
+  .lie-page-gif { width: 150px; }
+  
+  /* Update ukuran GIF di Mobile */
+  .final-gif { width: 110px; } 
+}
