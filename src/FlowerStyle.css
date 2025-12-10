@@ -15,8 +15,8 @@
 /* CONTAINER UTAMA */
 .bouquet-container {
   position: absolute;
-  /* REVISI: Turunkan ke 50px agar menapak tapi pita aman */
-  bottom: 50px;
+  /* REVISI DESKTOP: Naik ke 160px agar pita terlihat jelas */
+  bottom: 160px;
   left: 50%;
   transform: translateX(-50%);
   width: 500px;  
@@ -58,6 +58,7 @@
 
 /* --- PITA (RIBBON) --- */
 .ribbon-container {
+  /* Posisi pita ada di layer paling depan (z-index 25) */
   position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); z-index: 25;
   animation: pop-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 2.5s; opacity: 0;
 }
@@ -162,7 +163,7 @@
 @keyframes leaf-unfurl { to { opacity: 1; } }
 
 
-/* --- RESPONSIVE MOBILE (POSISI PAS DI DASAR) --- */
+/* --- RESPONSIVE MOBILE (POSISI DINAIKKAN AGAR PITA TERLIHAT) --- */
 @media (max-width: 600px) {
   
   .bouquet-container {
@@ -172,8 +173,9 @@
     /* Scale sedikit dikecilkan biar proporsional */
     transform: translateX(-50%) scale(0.65); 
     
-    /* REVISI: BOTTOM -20px AGAR MENAPAK TAPI PITA KELIHATAN */
-    bottom: -20px; 
+    /* REVISI: BOTTOM DINAIKKAN JADI 100px */
+    /* Ini akan mengangkat buket cukup tinggi sehingga pita aman terlihat */
+    bottom: 100px; 
     
     transform-origin: bottom center;
   }
