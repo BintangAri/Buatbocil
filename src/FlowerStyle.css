@@ -17,7 +17,7 @@
 /* ========================================= */
 .bouquet-container {
   position: absolute;
-  /* REVISI DESKTOP: Dinaikkan jadi 180px agar pita terlihat jelas */
+  /* REVISI DESKTOP: Tetap di 180px (sudah cukup tinggi) */
   bottom: 180px; 
   left: 50%;
   transform: translateX(-50%);
@@ -176,8 +176,9 @@
     /* Scale tetap */
     transform: translateX(-50%) scale(0.65); 
     
-    /* REVISI MOBILE: Dinaikkan jadi 120px agar pita aman terlihat */
-    bottom: 120px; 
+    /* REVISI MOBILE: Naikkan sedikit lagi dari 120px ke 140px */
+    /* Ini akan memastikan pita benar-benar terlihat aman di berbagai layar HP */
+    bottom: 140px; 
     
     transform-origin: bottom center;
   }
