@@ -6,8 +6,12 @@ const LiePage = ({ onRetry }) => {
   return (
     <div className="container lie-bg">
       <div className="gif-container">
-        {/* Pastikan file ini ada di folder public */}
-        <img src="/IMG_2050.GIF" alt="Panda Peek" className="lie-page-gif" />
+        {/* GUNAKAN process.env.PUBLIC_URL AGAR TERBACA DI GITHUB PAGES */}
+        <img 
+          src={process.env.PUBLIC_URL + "/panda.gif"} 
+          alt="Panda Peek" 
+          className="lie-page-gif" 
+        />
       </div>
 
       <h1 className="question">Kamu boong bocill! 😜</h1>
@@ -49,11 +53,19 @@ function App() {
 
           <Flowers />
           
-          {/* GIF KIRI: Perbaikan nama file jadi huruf kecil (.gif) */}
-          <img src="/2.gif" alt="Bear Rose" className="final-gif gif-left" />
+          {/* GIF KIRI: Gunakan nama file baru (bear.gif) */}
+          <img 
+            src={process.env.PUBLIC_URL + "/bear.gif"} 
+            alt="Bear Rose" 
+            className="final-gif gif-left" 
+          />
 
-          {/* GIF KANAN: Perbaikan nama file jadi huruf kecil (.gif) */}
-          <img src="/2.gif" alt="Bear Rose" className="final-gif gif-right" />
+          {/* GIF KANAN: Gunakan nama file baru (bear.gif) */}
+          <img 
+            src={process.env.PUBLIC_URL + "/bear.gif"} 
+            alt="Bear Rose" 
+            className="final-gif gif-right" 
+          />
         </div>
       )}
     </div>
