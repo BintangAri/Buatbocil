@@ -12,21 +12,23 @@
   background: radial-gradient(circle at center bottom, #ffe4e6, #fff0f5, #fff5f7);
 }
 
-/* CONTAINER UTAMA */
+/* ========================================= */
+/* CONTAINER UTAMA (POSISI DINAIKKAN LAGI) */
+/* ========================================= */
 .bouquet-container {
   position: absolute;
-  /* DESKTOP: Tetap di 100px agar proporsional */
-  bottom: 100px;
+  /* REVISI DESKTOP: Dinaikkan jadi 180px agar pita terlihat jelas */
+  bottom: 180px; 
   left: 50%;
   transform: translateX(-50%);
   width: 500px;  
   height: 650px; 
   pointer-events: none;
-  z-index: 10; 
+  z-index: 10; /* Di bawah GIF */
 }
 
 
-/* --- BAGIAN BUCKET --- */
+/* --- BAGIAN BUCKET (WRAPPING PAPER) --- */
 .bucket-paper-back {
   position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
   width: 540px;
@@ -57,15 +59,9 @@
 
 
 /* --- PITA (RIBBON) --- */
-/* REVISI: Pita dinaikkan posisinya (bottom 100px) agar aman dari potongan layar */
 .ribbon-container {
-  position: absolute; 
-  bottom: 100px; /* Naik dari 60px ke 100px */
-  left: 50%; 
-  transform: translateX(-50%); 
-  z-index: 25;
-  animation: pop-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 2.5s; 
-  opacity: 0;
+  position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); z-index: 25;
+  animation: pop-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 2.5s; opacity: 0;
 }
 .ribbon-knot {
   position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
@@ -85,9 +81,8 @@
 
 
 /* --- LOGIKA BATANG & TUMBUH --- */
-/* REVISI: Bunga dinaikkan sedikit (140px) mengikuti pita yang naik */
 .flowers-group {
-  position: absolute; bottom: 140px; left: 0; width: 100%; height: 100%; z-index: 10;
+  position: absolute; bottom: 120px; left: 0; width: 100%; height: 100%; z-index: 10;
 }
 .stem-wrapper {
   position: absolute; bottom: 0; width: 20px; transform-origin: bottom center;
@@ -169,19 +164,20 @@
 @keyframes leaf-unfurl { to { opacity: 1; } }
 
 
-/* --- RESPONSIVE MOBILE --- */
+/* ========================================= */
+/* RESPONSIVE MOBILE (POSISI DINAIKKAN LAGI) */
+/* ========================================= */
 @media (max-width: 600px) {
   
   .bouquet-container {
     width: 100%; 
     height: 100%;
     
-    /* Scale sedikit dikecilkan biar proporsional */
+    /* Scale tetap */
     transform: translateX(-50%) scale(0.65); 
     
-    /* REVISI: BOTTOM 10px (Nempel Bawah / Tidak Ngambang) */
-    /* Karena posisi Pita sudah dinaikkan di atas, maka pita tetap aman terlihat */
-    bottom: 10px; 
+    /* REVISI MOBILE: Dinaikkan jadi 120px agar pita aman terlihat */
+    bottom: 120px; 
     
     transform-origin: bottom center;
   }
