@@ -178,7 +178,7 @@
     
     /* REVISI MOBILE: Naikkan sedikit lagi dari 120px ke 140px */
     /* Ini akan memastikan pita benar-benar terlihat aman di berbagai layar HP */
-    bottom: 140px; 
+    bottom: 180px; 
     
     transform-origin: bottom center;
   }
